@@ -1,0 +1,14 @@
+/*
+font-family: 'Orbitron', sans-serif;
+
+text colors: (click on individual text on Figma to match color code)
+color: #08C6E7; light Blue
+color: #2BD9F7; light Blue
+color: #FFFFFF; White
+*/
+
+.link-border {
+    padding: 25px 50px;
+    border: 2px solid #08C6E7;
+    border-radius: 25px;
+}
