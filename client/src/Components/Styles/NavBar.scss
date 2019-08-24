@@ -4,12 +4,12 @@
   align-items: center;
   width: 100%;
 
-  img {
+  .sixr-logo {
     height: 137px;
     width: auto;
   }
 
-  div {
+  .nav-wrapper {
     align-content: space-around;
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,6 @@
     margin-right: 20px;
     text-transform: uppercase;
     width: 76%;
-
 
     a {
       text-decoration: none;
@@ -33,5 +32,27 @@
 }
 
 .active {
-    color: #FFFFFF;
+  color: #ffffff;
+}
+
+.user-navcard {
+  .user-card-link {
+    display: flex;
+    align-items: center;
+    
+    .img-wrapper {
+      margin-left: 20px;
+      height: 80px;
+      width: 75px;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 3px solid #08c6e7;
+
+      img {
+        width: auto;
+        height: 100%;
+        transform: translate(-25%, 0%);
+      }
+    }
+  }
 }
