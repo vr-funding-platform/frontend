@@ -39,7 +39,7 @@
   .user-card-link {
     display: flex;
     align-items: center;
-    
+
     .img-wrapper {
       margin-left: 20px;
       height: 80px;
@@ -54,5 +54,11 @@
         transform: translate(-25%, 0%);
       }
     }
+  }
+}
+
+.login-signup-btns {
+  .login-btn {
+    margin-right: 100px;
   }
 }
