@@ -16,7 +16,7 @@ const NavBar = () => {
         </NavLink>
 
         {/* //IF user is logged in, show below */}
-        <div className="user-navcard">
+        {/* <div className="user-navcard">
           <NavLink exact={true} activeClassName="active" to="/user" className="user-card-link">
             Jeff the philanthropic one
             <div className="img-wrapper">
@@ -27,21 +27,27 @@ const NavBar = () => {
               />
             </div>
           </NavLink>
-        </div>
+        </div> */}
 
         {/* //UNLESS user is not logged in, display below */}
-
-        {/* <NavLink exact={true} activeClassName="active" to="/login">
-          Log In
-        </NavLink>
-        <NavLink
-          exact={true}
-          activeClassName="active"
-          to="/signup"
-          className="link-border"
-        >
-          Sign Up
-        </NavLink> */}
+        <div className="login-signup-btns">
+          <NavLink
+            exact={true}
+            activeClassName="active"
+            to="/login"
+            className="login-btn"
+          >
+            Log In
+          </NavLink>
+          <NavLink
+            exact={true}
+            activeClassName="active"
+            to="/signup"
+            className="link-border"
+          >
+            Sign Up
+          </NavLink>
+        </div>
       </div>
     </nav>
   );
