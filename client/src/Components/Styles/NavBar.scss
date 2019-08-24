@@ -9,7 +9,7 @@
     width: auto;
   }
 
-  nav {
+  div {
     align-content: space-around;
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,7 @@
     a {
       text-decoration: none;
       color: #08c6e7;
-      font-size: 2.7rem;
+      font-size: 2.5rem;
       transition: 0.1s;
 
       &:hover {
