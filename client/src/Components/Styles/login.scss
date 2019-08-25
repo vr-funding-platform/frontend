@@ -8,12 +8,12 @@
     color: #08c6e7;
     padding-top: 8px;
 
-    h1 {
+    .login-head {
       font-size: 3.6rem;
       font-weight: bold;
     }
 
-    form {
+    .login-form-inputs {
       padding-top: 15px;
       display: flex;
       flex-direction: column;
@@ -21,12 +21,12 @@
       width: 100%;
       max-width: 665px;
 
-      h2 {
+      .login-input-label {
         font-size: 2.5rem;
         padding-left: 5px;
       }
 
-      input {
+      .login-input-field {
         margin-top: 12px;
         border: 3px solid #08c6e7;
         border-radius: 22px;
@@ -35,41 +35,26 @@
         text-align: left;
         width: 100%;
         padding: 12px 10px;
+
+        &:focus {
+          outline: none;
+        }
       }
 
       .form-element {
         width: 100%;
 
         &:nth-child(2) {
-          margin-top: 32px;
+          margin-top: 8px;
         }
 
-        p {
-            padding-top: 10px;
-            padding-left: 5px;
-            font-size: 1.5rem;
-            color: #D81159;
+        .login-error-container {
+          height: 25px;
         }
       }
 
-      .forgot-password {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        font-size: 1.97rem;
-        padding-top: 10px;
-        a {
-          text-decoration: none;
-          color: #08c6e7;
-
-          &:hover {
-            color: #1eddff; 
-          }
-        }
-      }
-
-      button {
-        margin-top: 25px;
+      .login-button {
+        margin-top: 20px;
         font-family: 'Orbitron', sans-serif;
         font-weight: bold;
         color: #ffff;
@@ -84,6 +69,46 @@
         &:hover {
           background: #09b3d1;
         }
+      }
+    }
+  }
+}
+
+.login-input-error {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-size: 1.5rem;
+    color: #d81159;
+    transition: 0.2s;
+  }
+
+  .under-password-error {
+    padding-left: 5px;
+    font-size: 1.5rem;
+    color: #d81159;
+    transition: 0.2s;
+  }
+
+.under-password-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  width: 100%;
+
+  .forgot-password {
+    display: flex;
+    justify-content: flex-end;
+
+    .forgot-pw-btn {
+      color: #08c6e7;
+      font-size: 1.97rem;
+      border: none;
+      font-family: 'Orbitron', sans-serif;
+      cursor: pointer;
+
+      &:hover {
+        color: #1eddff;
       }
     }
   }

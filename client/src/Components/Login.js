@@ -7,22 +7,43 @@ const Login = ({ errors, touched }) => {
   return (
     <section className="login-form">
       <div className="login-container">
-        <h1>LOGIN</h1>
-        <Form>
+        <h1 className="login-head">LOGIN</h1>
+        <Form className="login-form-inputs">
           <div className="form-element">
-            <h2>EMAIL</h2>
-            <Field type="email" name="email" spellCheck="false" />
-            {touched.email && errors.email && <p>{errors.email}</p>}
+            <h2 className="login-input-label">EMAIL</h2>
+            <Field
+              type="email"
+              name="email"
+              spellCheck="false"
+              className="login-input-field"
+            />
+            <div className="login-error-container">
+              {touched.email && errors.email && (
+                <p className="login-input-error">{errors.email}</p>
+              )}
+            </div>
           </div>
           <div className="form-element">
-            <h2>PASSWORD</h2>
-            <Field type="password" name="password" />
-            {touched.password && errors.password && <p>{errors.password}</p>}
+            <h2 className="login-input-label">PASSWORD</h2>
+            <Field
+              type="password"
+              name="password"
+              className="login-input-field"
+            />
+            <div className="under-password-container">
+              <div className="login-error-container">
+                {touched.password && errors.password && (
+                  <p className="under-password-error">{errors.password}</p>
+                )}
+              </div>
+              <div className="forgot-password">
+                <button className="forgot-pw-btn">Forgot Password?</button>
+              </div>
+            </div>
           </div>
-          <div className="forgot-password">
-            <a href="#">Forgot Password?</a>
-          </div>
-          <button type="submit">LOG IN</button>
+          <button className="login-button" type="submit">
+            LOG IN
+          </button>
         </Form>
       </div>
     </section>
