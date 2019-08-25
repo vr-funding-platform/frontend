@@ -20,7 +20,7 @@ const Login = ({ errors, touched }) => {
             {touched.password && errors.password && <p>{errors.password}</p>}
           </div>
           <div className="forgot-password">
-            <a href="#">Forgot Password</a>
+            <a href="#">Forgot Password?</a>
           </div>
           <button type="submit">LOG IN</button>
         </Form>
