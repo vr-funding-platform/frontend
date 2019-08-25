@@ -17,9 +17,9 @@ const Login = () => {
             <Field type="password" name="password" />
           </div>
           <div className="forgot-password">
-              <h3>Forgot Password</h3>
+            <a href="#">Forgot Password</a>
           </div>
-          <button type="submit">Log In</button>
+          <button type="submit">LOG IN</button>
         </Form>
       </div>
     </section>
