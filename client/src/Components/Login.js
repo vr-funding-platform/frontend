@@ -37,7 +37,9 @@ const Login = ({ errors, touched }) => {
                 )}
               </div>
               <div className="forgot-password">
-                <button className="forgot-pw-btn">Forgot Password?</button>
+                <button className="forgot-pw-btn" type="button">
+                  Forgot Password?
+                </button>
               </div>
             </div>
           </div>
