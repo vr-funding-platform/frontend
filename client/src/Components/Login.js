@@ -1,11 +1,38 @@
-import React from 'react'
+import React from 'react';
+import { withFormik, Form, Field } from 'formik';
+import './Styles/login.scss';
 
 const Login = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <section className="login-form">
+      <div className="login-container">
+        <h1>LOGIN</h1>
+        <Form>
+          <div className="form-element">
+            <h2>EMAIL</h2>
+            <Field type="email" name="email" />
+          </div>
+          <div className="form-element">
+            <h2>PASSWORD</h2>
+            <Field type="password" name="password" />
+          </div>
+          <div className="forgot-password">
+              <h3>Forgot Password</h3>
+          </div>
+          <button type="submit">Log In</button>
+        </Form>
+      </div>
+    </section>
+  );
+};
 
-export default Login
+const FomikLoginForm = withFormik({
+  mapPropsToValues({ email, password }) {
+    return {
+      email: email || '',
+      password: password || ''
+    };
+  }
+})(Login);
+
+export default FomikLoginForm;
