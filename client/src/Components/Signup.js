@@ -44,16 +44,45 @@ const SignUp = ({ errors, touched }) => {
               name="password"
               className="signup-input-field"
             />
-            <div className="under-password-container">
-              <div className="signup-error-container">
-                {touched.password && errors.password && (
-                  <p className="under-password-error">{errors.password}</p>
-                )}
+            <div className="signup-error-container">
+              {touched.password && errors.password && (
+                <p className="signup-input-error">{errors.password}</p>
+              )}
+            </div>
+          </div>
+          <div className="radio-form-element">
+            <h2 className="radio-input-label">
+              PLEASE CHOOSE YOUR ACCOUNT TYPE
+            </h2>
+
+            <div className="account-radio-buttons">
+              <div className="account-types">
+                <label htmlFor="creator">PROJECT CREATOR</label>
+                <Field
+                  type="radio"
+                  id="creator"
+                  name="accountType"
+                  value="creator"
+                />
               </div>
+              <div className="account-types">
+                <label htmlFor="donor">PROJECT DONOR</label>
+                <Field
+                  type="radio"
+                  id="donor"
+                  name="accountType"
+                  value="donor"
+                />
+              </div>
+            </div>
+            <div className="signup-error-container">
+              {touched.accountType && errors.accountType && (
+                <p className="signup-input-error">{errors.accountType}</p>
+              )}
             </div>
           </div>
           <button className="signup-button" type="submit">
-            LOG IN
+            CREATE ACCOUNT
           </button>
         </Form>
       </div>
@@ -62,25 +91,27 @@ const SignUp = ({ errors, touched }) => {
 };
 
 const FomiksignupForm = withFormik({
-  mapPropsToValues({ name, username, password }) {
+  mapPropsToValues({ name, username, password, accountType }) {
     return {
       name: name || '',
       username: username || '',
-      password: password || ''
+      password: password || '',
+      accountType: accountType || ''
     };
   },
 
   //=======Validation Schema======
   validationSchema: Yup.object().shape({
     name: Yup.string()
-      .min(5)
+      .min(4, 'Username must be 4 characters or longer')
       .required('Username is required'),
     username: Yup.string()
       .email('Email is not valid')
       .required('Email is not valid'),
     password: Yup.string()
       .min(6, 'Password must be 6 characters or longer')
-      .required('Password is required')
+      .required('Password is required'),
+    accountType: Yup.string().required('You must select an account type')
   }),
   //=====End Validation Schema====
 

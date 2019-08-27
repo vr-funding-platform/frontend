@@ -7,7 +7,7 @@ const Login = ({ errors, touched }) => {
   return (
     <section className="login-form">
       <div className="login-container">
-        <h1 className="login-head">LOGIN</h1>
+        <h1 className="login-head">LOG IN</h1>
         <Form className="login-form-inputs">
           <div className="form-element">
             <h2 className="login-input-label">EMAIL</h2>
