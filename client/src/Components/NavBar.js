@@ -11,13 +11,13 @@ const NavBar = () => {
         <NavLink exact={true} to="/">
           Home
         </NavLink>
-        <NavLink exact={true} activeClassName="active" to="/projects">
+        <NavLink exact={true} activeStyle={{ color: '#ffffff' }} to="/projects">
           Projects
         </NavLink>
 
         {/* //IF user is logged in, show below */}
         {/* <div className="user-navcard">
-          <NavLink exact={true} activeClassName="active" to="/user" className="user-card-link">
+          <NavLink exact={true} activeStyle={{color: "#ffffff"}} to="/user" className="user-card-link">
             Jeff the philanthropic one
             <div className="img-wrapper">
               <img
@@ -33,7 +33,7 @@ const NavBar = () => {
         <div className="login-signup-btns">
           <NavLink
             exact={true}
-            activeClassName="active"
+            activeStyle={{ color: '#ffffff' }}
             to="/login"
             className="login-btn"
           >
@@ -41,7 +41,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             exact={true}
-            activeClassName="active"
+            activeStyle={{ color: '#ffffff', border: '2px solid #ffffff' }}
             to="/signup"
             className="link-border"
           >

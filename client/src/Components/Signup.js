@@ -57,22 +57,30 @@ const SignUp = ({ errors, touched }) => {
 
             <div className="account-radio-buttons">
               <div className="account-types">
-                <label htmlFor="creator">PROJECT CREATOR</label>
-                <Field
-                  type="radio"
-                  id="creator"
-                  name="accountType"
-                  value="creator"
-                />
+                <label htmlFor="creator" className="radio-label">
+                  PROJECT
+                  <br />
+                  CREATOR
+                  <Field
+                    type="radio"
+                    id="creator"
+                    name="accountType"
+                    value="creator"
+                  />
+                </label>
               </div>
               <div className="account-types">
-                <label htmlFor="donor">PROJECT DONOR</label>
-                <Field
-                  type="radio"
-                  id="donor"
-                  name="accountType"
-                  value="donor"
-                />
+                <label htmlFor="donor" className="radio-label">
+                  PROJECT
+                  <br />
+                  DONOR
+                  <Field
+                    type="radio"
+                    id="donor"
+                    name="accountType"
+                    value="donor"
+                  />
+                </label>
               </div>
             </div>
             <div className="signup-error-container">
@@ -90,7 +98,7 @@ const SignUp = ({ errors, touched }) => {
   );
 };
 
-const FomiksignupForm = withFormik({
+const FomikSignupForm = withFormik({
   mapPropsToValues({ name, username, password, accountType }) {
     return {
       name: name || '',
@@ -120,4 +128,4 @@ const FomiksignupForm = withFormik({
   }
 })(SignUp);
 
-export default FomiksignupForm;
+export default FomikSignupForm;
