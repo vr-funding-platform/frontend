@@ -10,6 +10,20 @@ const SignUp = ({ errors, touched }) => {
         <h1 className="signup-head">SIGN UP</h1>
         <Form className="signup-form-inputs">
           <div className="form-element">
+            <h2 className="signup-input-label">USERNAME</h2>
+            <Field
+              type="name"
+              name="name"
+              spellCheck="false"
+              className="signup-input-field"
+            />
+            <div className="signup-error-container">
+              {touched.name && errors.name && (
+                <p className="signup-input-error">{errors.name}</p>
+              )}
+            </div>
+          </div>
+          <div className="form-element">
             <h2 className="signup-input-label">EMAIL</h2>
             <Field
               type="email"
@@ -36,11 +50,6 @@ const SignUp = ({ errors, touched }) => {
                   <p className="under-password-error">{errors.password}</p>
                 )}
               </div>
-              <div className="forgot-password">
-                <button className="forgot-pw-btn" type="button">
-                  Forgot Password?
-                </button>
-              </div>
             </div>
           </div>
           <button className="signup-button" type="submit">
@@ -53,8 +62,9 @@ const SignUp = ({ errors, touched }) => {
 };
 
 const FomiksignupForm = withFormik({
-  mapPropsToValues({ username, password }) {
+  mapPropsToValues({ name, username, password }) {
     return {
+      name: name || '',
       username: username || '',
       password: password || ''
     };
@@ -62,6 +72,9 @@ const FomiksignupForm = withFormik({
 
   //=======Validation Schema======
   validationSchema: Yup.object().shape({
+    name: Yup.string()
+      .min(5)
+      .required('Username is required'),
     username: Yup.string()
       .email('Email is not valid')
       .required('Email is not valid'),
