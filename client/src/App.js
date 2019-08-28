@@ -9,21 +9,16 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <p>
-        
-      </p>
-      <footer>
-        <Footer/>
-      </footer>
       <NavBar />
+  
 
       
       {/* <Route path="/projects" component={Projects} /> */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

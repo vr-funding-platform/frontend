@@ -1,0 +1,60 @@
+{
+	"id": 1,
+	"projectName": "THE VIRTUAL REALITY WATERPARK RIDE EXPERIENCE",
+	"projectType": "VR",
+	"description": "This project uses a waterproof VR Headset to enhance the many water park rides in the surrounding Seattle area and then eventually around the world.\nWe plan to accomplish this by reaching these milestones:\n1. By November 2019 we will have a working waterproof headset.\n2. By January 2020 we will have a full 3-D ride finished.\n3. By March 2020 we will begin testing within the parks.\n4. By July 2020 we will officially launch to the public.\n5. By August 2020 we will expand into 3 more waterparks.\n6. Finally, by November 2020 we will launch in all 10 Seattle water parks.",
+	"fundingAmount": "10000.00",
+	"fundingGoal": "30000.00",
+	"donors": "",
+	"funded": false,
+	"img": "https://i.ibb.co/30bF0S1/vrtubes.jpg",
+	"user_id": 1
+}
+{
+	"id": 2,
+	"projectName": "A FIRST-PERSON COOPERATIVE SUPER HERO ADVENTURE",
+	"projectType": "VR",
+	"description": "This project will use the unreal engine to create a first-person cooperative, super hero experience. This experience will allow you to choose your own super powers and use them to battle evil in an epic adventure that can be had with your friends and family. This product will be deployed for the many Virtual Reality centers throughout Seattle, and then around the world.\nWe plan to accomplish this by reaching these milestones:\n1. By December 2019 complete the adventure portion of the VR experience.\n2. By January 2020 we will begin user testing to ensure the highest quality and to refine the experience.\n3. By May 2020 we will begin limited group testing in public VR facilities.\n4. By June 2020 we will officially launch to the public.\n5. By August 2020 we will expand into 3 more Virtual Reality centers in Seattle.\n6. Finally, by October 2020 we will launch in 5 other virtual reality centers in Washington and Portland.",
+	"fundingAmount": "20000.00",
+	"fundingGoal": "30000.00",
+	"donors": "",
+	"funded": false,
+	"img": "https://i.ibb.co/KFsWmn1/vrflying.png",
+	"user_id": 1
+}
+{
+	"id": 3,
+	"projectName": "A VIRTUAL REALITY “GROUP” HIKING EXPERIENCE",
+	"projectType": "VR",
+	"description": "This project will use real-world topographical data to create virtual hikes from popular hiking destinations from around the world. This experience will be geared towards families, especially the elderly and youth who would find it too dangerous or taxing to take these hikes in real-life. This will be an online, at home experience.\nWe plan to accomplish this by reaching these milestones:\n1. By January 2020, we will have gathered all of the graphical data necessary to create 15 successful hikes.\n2. By February 2020, we will begin user testing in groups to ensure feasability and problem spots for each hike.\n3. By April 2020, we will deploy 1 hike into a public VR facility for additional group testing.\n4. By June 2020, we will officially launch to the public on all major home VR Platforms.\n5. By August 2020, we will expand by adding 50 additional experiences from hiking data from all around the world. We will continue to build and refine this experience for years to come.",
+	"fundingAmount": "20000.00",
+	"fundingGoal": "50000.00",
+	"donors": "",
+	"funded": false,
+	"img": "https://i.ibb.co/gFXHLD2/vrhikes.jpg",
+	"user_id": 1
+}
+{
+	"id": 4,
+	"projectName": "AN AUGMENTED REALITY INTERIOR DESIGN APPLICATION",
+	"projectType": "VR",
+	"description": "This project is geared towards all users, including less technologically-savvy users, to test and create stunning interior designs before creating them in real life. We will use a camera to take photographic data in real-time of any interior and allow the user to decorate it virtual with hundreds of objects, paints, and options. This experience will be geared towards those who would like to experience different home decor without having to spend the money to test their ideas in real life. Test it, and then buy it!\nWe plan to accomplish this by reaching these milestones:\n1. By October 2019, we will have gathered and created all of the 3-D objects that will be used within the app.\n2. By December 2019, we will begin testing the 3-D camera to gather environment data from several homes.\n3. By May 2020, we will begin user testing and usability improvements.\n4. Finally, by December 2020 we will launch as a stand alone app store product that can be used with any virtual realilty headset. Camera sold separately.",
+	"fundingAmount": "50000.00",
+	"fundingGoal": "67000.00",
+	"donors": "",
+	"funded": false,
+	"img": "https://i.ibb.co/Pjcb61V/VR-interior-design.png",
+	"user_id": 1
+}
+{
+	"id": 5,
+	"projectName": "A VIRTUAL REALITY FULL-STAFFED RESTAURANT COOKING SIMULATOR",
+	"projectType": "VR",
+	"description": "This project is a family-fun, zany experience for a group of people. It allows you to take charge of a restaurant and actually cook and prepare meals for guests while your friends assist you in cooking and serving the food. It is a fun and proven concept as similar concepts have been tested and found to be very popular among all ages, genders and backgrounds. Cooking brings us all together! Our product will be released on all home-based VR platforms.\nWe plan to accomplish this by reaching these milestones:\n1. By September 2019, we will test the proof of concept in its alpha stage, and use this testing to improve the interactive aspects of the product.\n2. By October 2019, we will extend this testing to include a select group of opt-in users to further increase the fun-factor and usability.\n3. By December 2019, we will begin a larger batch of beta testing in preparation for our final release.\n4. Finally, by the end of December 2019 we will launch on the steam VR store the general public.",
+	"fundingAmount": "15000.00",
+	"fundingGoal": "30000.00",
+	"donors": "",
+	"funded": false,
+	"img": "https://i.ibb.co/PQK8VdQ/vrcooking.jpg",
+	"user_id": 1
+}
