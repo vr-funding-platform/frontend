@@ -44,9 +44,10 @@ table {
 
 /*END CSS RESET*/
 
-* {
+*, :focus {
   box-sizing: border-box;
   background: black;
+  outline: none;
 }
 
 html {
