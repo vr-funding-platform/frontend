@@ -9,7 +9,7 @@
 	"funded": false,
 	"img": "https://i.ibb.co/30bF0S1/vrtubes.jpg",
 	"user_id": 1
-}
+},
 {
 	"id": 2,
 	"projectName": "A FIRST-PERSON COOPERATIVE SUPER HERO ADVENTURE",
@@ -21,7 +21,7 @@
 	"funded": false,
 	"img": "https://i.ibb.co/KFsWmn1/vrflying.png",
 	"user_id": 1
-}
+},
 {
 	"id": 3,
 	"projectName": "A VIRTUAL REALITY “GROUP” HIKING EXPERIENCE",
@@ -33,7 +33,7 @@
 	"funded": false,
 	"img": "https://i.ibb.co/gFXHLD2/vrhikes.jpg",
 	"user_id": 1
-}
+},
 {
 	"id": 4,
 	"projectName": "AN AUGMENTED REALITY INTERIOR DESIGN APPLICATION",
@@ -45,7 +45,7 @@
 	"funded": false,
 	"img": "https://i.ibb.co/Pjcb61V/VR-interior-design.png",
 	"user_id": 1
-}
+},
 {
 	"id": 5,
 	"projectName": "A VIRTUAL REALITY FULL-STAFFED RESTAURANT COOKING SIMULATOR",
@@ -57,4 +57,4 @@
 	"funded": false,
 	"img": "https://i.ibb.co/PQK8VdQ/vrcooking.jpg",
 	"user_id": 1
-}
+};
