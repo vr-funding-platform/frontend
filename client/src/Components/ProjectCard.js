@@ -15,14 +15,31 @@ const ProjectCard = ({
 
   return (
     <div className="project-box">
-      <p>Project {id}</p>
+      <p className="project-num">Project {id}</p>
+      <h2 className="project-title">{projectName}</h2>
       <div className="project-container">
-        <h2>{projectName}</h2>
-        {description.split('\n').map((item, i) => {
-          return <p key={i}>{item}</p>;
-        })}
-        <p>Funding Required: ${requiredFunds}</p>
-        <p>Still Needed: ${totalFunded}</p>
+        <div className="left-project-container">
+          <div className="proj-image-container">
+            <img src={img} className="project-image" alt={projectName} />
+          </div>
+          <div className="funding-elements">
+            <p className="funding-amount">
+              FUNDING REQUIRED: <span>${requiredFunds}</span>
+            </p>
+            <p className="funding-amount">
+              STILL NEEDED: <span>${totalFunded}</span>
+            </p>
+          </div>
+        </div>
+        <div className="right-project-container">
+          {description.split('\n').map((item, i) => {
+            return (
+              <p className={`project-description_` + i} key={i}>
+                {item}
+              </p>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
