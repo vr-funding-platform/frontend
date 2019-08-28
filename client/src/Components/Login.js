@@ -7,19 +7,19 @@ const Login = ({ errors, touched }) => {
   return (
     <section className="login-form">
       <div className="login-container">
-        <h1 className="login-head">LOGIN</h1>
+        <h1 className="login-head">LOG IN</h1>
         <Form className="login-form-inputs">
           <div className="form-element">
             <h2 className="login-input-label">EMAIL</h2>
             <Field
               type="email"
-              name="email"
+              name="username"
               spellCheck="false"
               className="login-input-field"
             />
             <div className="login-error-container">
-              {touched.email && errors.email && (
-                <p className="login-input-error">{errors.email}</p>
+              {touched.username && errors.username && (
+                <p className="login-input-error">{errors.username}</p>
               )}
             </div>
           </div>
@@ -53,16 +53,16 @@ const Login = ({ errors, touched }) => {
 };
 
 const FomikLoginForm = withFormik({
-  mapPropsToValues({ email, password }) {
+  mapPropsToValues({ username, password }) {
     return {
-      email: email || '',
+      username: username || '',
       password: password || ''
     };
   },
 
   //=======Validation Schema======
   validationSchema: Yup.object().shape({
-    email: Yup.string()
+    username: Yup.string()
       .email('Email is not valid')
       .required('Email is not valid'),
     password: Yup.string()
