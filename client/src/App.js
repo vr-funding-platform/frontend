@@ -23,12 +23,13 @@ function App() {
       });
   }, []);
 
-  // console.log(projects);
   return (
     <div className="App">
       <NavBar />
 
-      <Route path="/projects" render={() => projects && <ProjectList projects={projects} />} />
+      <Route path="/projects" render={(props) => {
+        return projects && <ProjectList {...props} projects={projects} />;
+      }} />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       {/* <footer>

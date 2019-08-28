@@ -5,7 +5,7 @@ const ProjectList = ({ projects }) => {
     return (
         <div>
             {projects.map(proj => (
-                <p>{proj.projectName}</p>
+                <ProjectCard info={proj} key={proj.id} />
             ))}
         </div>
     )
