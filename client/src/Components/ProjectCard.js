@@ -34,7 +34,7 @@ const ProjectCard = ({
         <div className="right-project-container">
           {description.split('\n').map((item, i) => {
             return (
-              <p className={`project-description_` + i} key={i}>
+              <p className={`description-rows project-description_` + i} key={i}>
                 {item}
               </p>
             );
