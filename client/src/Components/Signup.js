@@ -1,7 +1,8 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import './Styles/signup.scss';
+import './Styles/signup.scss'
+import { IoMdAddCircle } from 'react-icons/io';
 
 const SignUp = ({ errors, touched }) => {
   return (
@@ -61,12 +62,14 @@ const SignUp = ({ errors, touched }) => {
                 PROJECT
                 <br />
                 CREATOR
+                <IoMdAddCircle className="box-icon" /> 
               </label>
               <Field type="radio" id="donor" name="accountType" value="donor" />
               <label htmlFor="donor" className="radio-label donor-box">
                 PROJECT
                 <br />
                 DONOR
+                <IoMdAddCircle className="box-icon" /> 
               </label>
             </div>
             <div className="signup-error-container">
