@@ -56,32 +56,18 @@ const SignUp = ({ errors, touched }) => {
             </h2>
 
             <div className="account-radio-buttons">
-              <div className="account-types">
-                <label htmlFor="creator" className="radio-label">
-                  PROJECT
-                  <br />
-                  CREATOR
-                  <Field
-                    type="radio"
-                    id="creator"
-                    name="accountType"
-                    value="creator"
-                  />
-                </label>
-              </div>
-              <div className="account-types">
-                <label htmlFor="donor" className="radio-label">
-                  PROJECT
-                  <br />
-                  DONOR
-                  <Field
-                    type="radio"
-                    id="donor"
-                    name="accountType"
-                    value="donor"
-                  />
-                </label>
-              </div>
+              <Field type="radio" id="creator" name="accountType" value="creator" />
+              <label htmlFor="creator" className="radio-label creator-box" >
+                PROJECT
+                <br />
+                CREATOR
+              </label>
+              <Field type="radio" id="donor" name="accountType" value="donor" />
+              <label htmlFor="donor" className="radio-label donor-box">
+                PROJECT
+                <br />
+                DONOR
+              </label>
             </div>
             <div className="signup-error-container">
               {touched.accountType && errors.accountType && (
