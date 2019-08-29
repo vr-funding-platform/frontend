@@ -17,15 +17,15 @@ function Footer () {
             <div className="footer-social">
                 <p>&copy;SIXER 2019 - Simulated Immersive eXperimental Realities | Brooklyn Ave NE, Seattle, WA, 98105 | 206-571-8430 | SIXR@Studivo.com</p>
                 <p>Social Media Links</p>
-                <div classNameName="sml">
+                <div className="sml">
                  <a className="fab fa-facebook" href="https://www.facebook.com/sixrvr ">
-                    <IoLogoFacebook classNameName="facebook" />
+                    <IoLogoFacebook className="facebook" />
                     </a>
                     <a className="fab fa-twitter" href="https://twitter.com/sixrvr">
-                    <IoLogoTwitter classNameName="twitter" />
+                    <IoLogoTwitter className="twitter" />
                     </a>
                     <a className="fab fa-youtube"href="https://www.youtube.com/channel/UCVavPlD8iCYHyKhVJ06PAlw/featured ">
-                    <IoLogoYoutube classNameName="youtube" />
+                    <IoLogoYoutube className="youtube" />
                     </a>
                  </div>
             </div>
