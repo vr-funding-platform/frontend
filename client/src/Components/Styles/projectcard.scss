@@ -1,0 +1,92 @@
+.project-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  color: #08c6e7;
+  margin-bottom: 120px;
+
+  .project-num {
+    font-size: 2.5rem;
+    padding-top: 49px;
+    color: white;
+  }
+
+  .project-title {
+    font-size: 3.4rem;
+    width: 81%;
+    text-align: center;
+    padding-top: 103px;
+    text-decoration: underline;
+    line-height: 125%;
+  }
+
+  .project-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 79px;
+
+    .left-project-container {
+      .proj-image-container {
+        overflow: hidden;
+
+        .project-image {
+          max-width: 660px;
+          height: auto;
+        }
+      }
+
+      .funding-elements {
+        padding-top: 32px;
+
+        .funding-amount {
+          font-size: 3.35rem;
+
+          &:nth-child(2) {
+            padding-top: 18px;
+          }
+
+          .funding-numbers {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .right-project-container {
+      width: 50%;
+      padding-left: 22px;
+
+      .description-rows {
+        font-size: 2.2rem;
+        font-family: Roboto;
+        font-style: normal;
+        line-height: 150%;
+      }
+
+      .project-description_1 {
+        padding-top: 30px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .fund-button {
+    padding: 24px 16px;
+    font-size: 2.4rem;
+    margin-top: 65px;
+    border: 4px solid #08c6e7;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.2s;
+
+    &:hover {
+      background: #46e3ff;
+      color: black;
+    }
+  }
+}

@@ -20,11 +20,11 @@
     text-transform: uppercase;
     width: 76%;
 
-    a {
+    .navigation-links-inner {
       text-decoration: none;
       color: #08c6e7;
       font-size: 2.5rem;
-      transition: 0.1s;
+      transition: 0.15s;
 
       &:hover {
         color: rgb(122, 235, 255);
@@ -58,5 +58,20 @@
 .login-signup-btns {
   .login-btn {
     margin-right: 100px;
+  }
+
+  .sign-up-btn {
+    font-weight: bold;
+    color: white;
+    padding: 20px 57px;
+    border: 4px solid #2BD9F7;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: 0.15s;
+
+    &:hover {
+      border: 4px solid rgb(122, 235, 255);
+    }
   }
 }
