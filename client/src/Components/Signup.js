@@ -1,11 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {Redirect} from 'react-router-dom';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import './Styles/signup.scss';
 import { IoMdAddCircle } from 'react-icons/io';
 
-const SignUp = ({ errors, touched }) => {
+const SignUp = ({ errors, touched, auth, status }) => {
+  const [redirectToReferrer, setRedirectToReferrer] = useState(false);
+
+  useEffect(() => {
+    if (status === true) {
+      auth.authenticate(() => {
+        setRedirectToReferrer(true);
+      });
+    }
+  }, [status, auth]);
+
+  if (redirectToReferrer === true) {
+    return <Redirect to="/protected" />;
+  }
+
   return (
     <section className="signup-form">
       <div className="signup-container">
@@ -113,11 +128,11 @@ const FomikSignupForm = withFormik({
   }),
   //=====End Validation Schema====
 
-  handleSubmit(values) {
+  handleSubmit(values, { setStatus }) {
     axios
       .post('https://vr-overlord-server.herokuapp.com/auth/register', values)
       .then(res => {
-        console.log(res.data);
+        setStatus(true, res.data);
       })
       .catch(err => {
         console.log('There was an error', err);

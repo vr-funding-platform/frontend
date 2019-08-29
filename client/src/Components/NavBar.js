@@ -1,9 +1,12 @@
 import React from 'react';
+import { useMedia } from 'react-use';
 import { NavLink } from 'react-router-dom';
 import './Styles/NavBar.scss';
 import Logo from './Styles/Logo.png';
 
 const NavBar = () => {
+  const match = useMedia('(max-width: 1050px)');
+
   return (
     <nav className="navbar">
       <img src={Logo} alt="SIXR Logo" className="sixr-logo" />
@@ -31,7 +34,10 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             exact={true}
-            activeStyle={{ color: '#ffffff', border: '4px solid #ffffff' }}
+            activeStyle={{
+              color: '#ffffff',
+              border: match ? '2px solid #ffffff' : '4px solid #ffffff'
+            }}
             to="/signup"
             className="sign-up-btn"
           >
