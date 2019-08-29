@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { withFormik, Form, Field } from 'formik';
+import { Redirect } from 'react-router-dom';
 import * as Yup from 'yup';
 import axios from 'axios';
 import './Styles/login.scss';
 
-const Login = ({ errors, touched }) => {
+const Login = ({ errors, touched, auth, status }) => {
+  const [redirectToReferrer, setRedirectToReferrer] = useState(false);
+
+
+  const login = () => {
+    auth.authenticate(() => {
+      setRedirectToReferrer(true);
+    });
+  }
+  useEffect(() => {
+    if (status === true) {
+      login();
+    }
+  }, [status]);
+
+  if (redirectToReferrer === true) {
+    return <Redirect to="/user/:id" />;
+  }
+
   return (
     <section className="login-form">
       <div className="login-container">
@@ -72,11 +91,11 @@ const FomikLoginForm = withFormik({
   }),
   //=====End Validation Schema====
 
-  handleSubmit(values) {
+  handleSubmit(values, { setStatus }) {
     axios
       .post('https://vr-overlord-server.herokuapp.com/auth/login', values)
       .then(res => {
-        console.log(res.data);
+        setStatus(true, res.data);
       })
       .catch(err => {
         console.log('There was an error', err);

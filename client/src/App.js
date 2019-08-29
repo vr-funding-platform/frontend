@@ -1,31 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Link } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import ProjectList from './Components/ProjectList';
 import axios from 'axios';
 
+import Protected from './Components/Protected';
+
 import './App.css';
 // import Footer from "./Components/Footer";
 
-
-const fakeAuth = {
-  isAuthenticated: false,
-
-  authenticate(cb) {
-    this.isAuthenticated = true,
-    setTimeout(cb, 100)
-  },
-
-  signout(cb) {
-    this.isAuthenticated = false,
-    setTimeout(cb, 100)
-  }
-}
-
-
 function App() {
+  const fakeAuth = {
+    isAuthenticated: false,
+    authenticate(cb) {
+      this.isAuthenticated = true;
+      setTimeout(cb, 100); // fake async
+    },
+    signout(cb) {
+      this.isAuthenticated = false;
+      setTimeout(cb, 100); // fake async
+    }
+  };
+
+  const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props =>
+        fakeAuth.isAuthenticated === true ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/login" />
+        )
+      }
+    />
+  );
   const [projects, setProjects] = useState();
 
   useEffect(() => {
@@ -42,6 +52,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Link to="/protected">Protected</Link>
 
       <Route
         path="/projects"
@@ -49,8 +60,12 @@ function App() {
           return projects && <ProjectList {...props} projects={projects} />;
         }}
       />
-      <Route path="/login" render={props => <Login {...props} />} />
+      <Route
+        path="/login"
+        render={props => <Login {...props} auth={fakeAuth} />}
+      />
       <Route path="/signup" render={props => <Signup {...props} />} />
+      <PrivateRoute path="/protected" component={Protected} />
       {/* <footer>
         <Footer/>
       </footer> */}
