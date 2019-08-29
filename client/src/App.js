@@ -9,6 +9,22 @@ import axios from 'axios';
 import './App.css';
 // import Footer from "./Components/Footer";
 
+
+const fakeAuth = {
+  isAuthenticated: false,
+
+  authenticate(cb) {
+    this.isAuthenticated = true,
+    setTimeout(cb, 100)
+  },
+
+  signout(cb) {
+    this.isAuthenticated = false,
+    setTimeout(cb, 100)
+  }
+}
+
+
 function App() {
   const [projects, setProjects] = useState();
 
@@ -27,11 +43,14 @@ function App() {
     <div className="App">
       <NavBar />
 
-      <Route path="/projects" render={(props) => {
-        return projects && <ProjectList {...props} projects={projects} />;
-      }} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={Signup} />
+      <Route
+        path="/projects"
+        render={props => {
+          return projects && <ProjectList {...props} projects={projects} />;
+        }}
+      />
+      <Route path="/login" render={props => <Login {...props} />} />
+      <Route path="/signup" render={props => <Signup {...props} />} />
       {/* <footer>
         <Footer/>
       </footer> */}
