@@ -8,20 +8,16 @@ import './Styles/login.scss';
 const Login = ({ errors, touched, auth, status }) => {
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
 
-
-  const login = () => {
-    auth.authenticate(() => {
-      setRedirectToReferrer(true);
-    });
-  }
   useEffect(() => {
     if (status === true) {
-      login();
+      auth.authenticate(() => {
+        setRedirectToReferrer(true);
+      });
     }
-  }, [status]);
+  }, [status, auth]);
 
   if (redirectToReferrer === true) {
-    return <Redirect to="/user/:id" />;
+    return <Redirect to="/protected" />;
   }
 
   return (

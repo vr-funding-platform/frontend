@@ -1,9 +1,10 @@
 import React from 'react'
+import './Styles/protect.scss';
 
 const Protected = () => {
     return (
         <div>
-            TEST
+            YOU WERE ABLE TO ACCESS
         </div>
     )
 }

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Styles/NavBar.scss';
 import Logo from './Styles/Logo.png';
 
-const NavBar = () => {
+const NavBarUser = () => {
   return (
     <nav className="navbar">
       <img src={Logo} alt="SIXR Logo" className="sixr-logo" />
@@ -20,22 +20,21 @@ const NavBar = () => {
           Projects
         </NavLink>
 
-        <div className="login-signup-btns">
+        <div className="user-navcard">
           <NavLink
             exact={true}
             activeStyle={{ color: '#ffffff' }}
-            to="/login"
-            className="login-btn navigation-links-inner"
+            to="/user"
+            className="user-card-link"
           >
-            Log In
-          </NavLink>
-          <NavLink
-            exact={true}
-            activeStyle={{ color: '#ffffff', border: '4px solid #ffffff' }}
-            to="/signup"
-            className="sign-up-btn"
-          >
-            Sign Up
+            Jeff the philanthropic one
+            <div className="img-wrapper">
+              <img
+                src="https://i.imgur.com/j8xvz88.jpg"
+                alt="user-icon"
+                className="user-icon"
+              />
+            </div>
           </NavLink>
         </div>
       </div>
@@ -43,4 +42,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarUser;

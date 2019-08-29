@@ -37,6 +37,14 @@
   .user-card-link {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #08c6e7;
+    font-size: 2.5rem;
+    transition: 0.15s;
+
+    &:hover {
+      color: rgb(122, 235, 255);
+    }
 
     .img-wrapper {
       margin-left: 20px;
@@ -64,7 +72,7 @@
     font-weight: bold;
     color: white;
     padding: 20px 57px;
-    border: 4px solid #2BD9F7;
+    border: 4px solid #2bd9f7;
     border-radius: 25px;
     text-decoration: none;
     font-size: 2.5rem;
