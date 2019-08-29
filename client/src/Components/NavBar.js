@@ -8,10 +8,15 @@ const NavBar = () => {
     <nav className="navbar">
       <img src={Logo} alt="SIXR Logo" className="sixr-logo" />
       <div className="nav-wrapper">
-        <NavLink exact={true} to="/">
+        <NavLink exact={true} to="/" className="navigation-links-inner">
           Home
         </NavLink>
-        <NavLink exact={true} activeStyle={{ color: '#ffffff' }} to="/projects">
+        <NavLink
+          exact={true}
+          activeStyle={{ color: '#ffffff' }}
+          to="/projects"
+          className="navigation-links-inner"
+        >
           Projects
         </NavLink>
 
@@ -35,7 +40,7 @@ const NavBar = () => {
             exact={true}
             activeStyle={{ color: '#ffffff' }}
             to="/login"
-            className="login-btn"
+            className="login-btn navigation-links-inner"
           >
             Log In
           </NavLink>
@@ -43,7 +48,7 @@ const NavBar = () => {
             exact={true}
             activeStyle={{ color: '#ffffff', border: '2px solid #ffffff' }}
             to="/signup"
-            className="link-border"
+            className="sign-up-btn"
           >
             Sign Up
           </NavLink>

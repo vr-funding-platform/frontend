@@ -1,6 +1,7 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 import './Styles/login.scss';
 
 const Login = ({ errors, touched }) => {
@@ -72,7 +73,14 @@ const FomikLoginForm = withFormik({
   //=====End Validation Schema====
 
   handleSubmit(values) {
-    console.log(values);
+    axios
+      .post('https://vr-overlord-server.herokuapp.com/auth/login', values)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log('There was an error', err);
+      });
   }
 })(Login);
 

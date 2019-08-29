@@ -1,7 +1,8 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import './Styles/signup.scss'
+import axios from 'axios';
+import './Styles/signup.scss';
 import { IoMdAddCircle } from 'react-icons/io';
 
 const SignUp = ({ errors, touched }) => {
@@ -57,24 +58,24 @@ const SignUp = ({ errors, touched }) => {
             </h2>
 
             <div className="account-radio-buttons">
-              <Field type="radio" id="creator" name="accountType" value="creator" />
-              <label htmlFor="creator" className="radio-label creator-box" >
+              <Field type="radio" id="creator" name="role" value="creator" />
+              <label htmlFor="creator" className="radio-label creator-box">
                 PROJECT
                 <br />
                 CREATOR
-                <IoMdAddCircle className="box-icon" /> 
+                <IoMdAddCircle className="box-icon" />
               </label>
-              <Field type="radio" id="donor" name="accountType" value="donor" />
+              <Field type="radio" id="donor" name="role" value="donor" />
               <label htmlFor="donor" className="radio-label donor-box">
                 PROJECT
                 <br />
                 DONOR
-                <IoMdAddCircle className="box-icon" /> 
+                <IoMdAddCircle className="box-icon" />
               </label>
             </div>
             <div className="signup-error-container">
-              {touched.accountType && errors.accountType && (
-                <p className="signup-input-error">{errors.accountType}</p>
+              {touched.role && errors.role && (
+                <p className="signup-input-error">{errors.role}</p>
               )}
             </div>
           </div>
@@ -88,12 +89,12 @@ const SignUp = ({ errors, touched }) => {
 };
 
 const FomikSignupForm = withFormik({
-  mapPropsToValues({ name, username, password, accountType }) {
+  mapPropsToValues({ name, username, password, role }) {
     return {
       name: name || '',
       username: username || '',
       password: password || '',
-      accountType: accountType || ''
+      role: role || ''
     };
   },
 
@@ -108,12 +109,19 @@ const FomikSignupForm = withFormik({
     password: Yup.string()
       .min(6, 'Password must be 6 characters or longer')
       .required('Password is required'),
-    accountType: Yup.string().required('You must select an account type')
+    role: Yup.string().required('You must select an account type')
   }),
   //=====End Validation Schema====
 
   handleSubmit(values) {
-    console.log(values);
+    axios
+      .post('https://vr-overlord-server.herokuapp.com/auth/register', values)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log('There was an error', err);
+      });
   }
 })(SignUp);
 
