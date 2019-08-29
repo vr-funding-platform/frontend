@@ -15,7 +15,7 @@ const ProjectCard = ({
 
   return (
     <div className="project-box">
-      <p className="project-num">Project {id}</p>
+      <p className="project-num">Project: {id}</p>
       <h2 className="project-title">{projectName}</h2>
       <div className="project-container">
         <div className="left-project-container">
@@ -24,23 +24,31 @@ const ProjectCard = ({
           </div>
           <div className="funding-elements">
             <p className="funding-amount">
-              FUNDING REQUIRED: <span>${requiredFunds}</span>
+              FUNDING REQUIRED:{' '}
+              <span className="funding-numbers">${requiredFunds}</span>
             </p>
             <p className="funding-amount">
-              STILL NEEDED: <span>${totalFunded}</span>
+              STILL NEEDED:{' '}
+              <span className="funding-numbers">${totalFunded}</span>
             </p>
           </div>
         </div>
         <div className="right-project-container">
           {description.split('\n').map((item, i) => {
             return (
-              <p className={`description-rows project-description_` + i} key={i}>
+              <p
+                className={`description-rows project-description_` + i}
+                key={i}
+              >
                 {item}
               </p>
             );
           })}
         </div>
       </div>
+      <button type="button" className="fund-button">
+        FUND THIS PROJECT
+      </button>
     </div>
   );
 };
