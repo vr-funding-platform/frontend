@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 93%;
-  margin: 0 auto;
+  width: 95%;
   color: white;
 
   .project-num {
@@ -45,7 +44,19 @@
     }
 
     .right-project-container {
-      width: 48.5%;
+      width: 50%;
+      padding-left: 22px;
+
+      .description-rows {
+        font-size: 2.23rem;
+        font-family: Roboto;
+        font-style: normal;
+        line-height: 150%;
+      }
+
+      .project-description_1 {
+        padding-top: 30px;
+      }
     }
   }
 }
