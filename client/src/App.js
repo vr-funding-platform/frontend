@@ -7,7 +7,7 @@ import ProjectList from './Components/ProjectList';
 import axios from 'axios';
 import './App.css';
 import Footer from "./Components/Footer";
-
+import DonorList from "./Components/DonorList"
 
 function App() {
   const [projects, setProjects] = useState();
@@ -26,13 +26,16 @@ function App() {
   return (
     <div className="App">
      <NavBar />
-     <UserCard/>
+     
       {/* <Route path="/projects" component={Projects} /> */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/projects" render={(props) => {
         return projects && <ProjectList {...props} projects={projects} />;
       }} />
+      <Route path="/user" render={(props) => {
+        return projects && <DonorList  {...props} projects={projects} />;
+      }}/>
       <Footer/>
       {/* <footer>
         <Footer/>

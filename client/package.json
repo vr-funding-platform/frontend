@@ -10,6 +10,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
+    "react-inline-editing": "^1.0.10",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "styled-components": "^4.3.2",
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "react-edit-inline": "^1.0.8",
     "react-image-resizer": "^1.3.0"
   }
 }
