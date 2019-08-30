@@ -62,7 +62,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* {navUser ? <NavBarUser /> : <NavBar />} */}
       {match800
         ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
         : [navUser ? <NavBarUser /> : <NavBar />]}
@@ -75,7 +74,7 @@ function App() {
         }}
       />
       <Route
-        path="/login"
+        exact path="/"
         render={props => <Login {...props} auth={fakeAuth} />}
       />
       <Route

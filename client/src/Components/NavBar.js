@@ -11,9 +11,12 @@ const NavBar = () => {
     <nav className="navbar">
       <img src={Logo} alt="SIXR Logo" className="sixr-logo" />
       <div className="nav-wrapper">
-        <NavLink exact={true} to="/" className="navigation-links-inner">
+        <a
+          href="https://vr-funding-platform.github.io/SIXR--marketing/index.html"
+          className="navigation-links-inner-mobile menu-item"
+        >
           Home
-        </NavLink>
+        </a>
         <NavLink
           exact={true}
           activeStyle={{ color: '#ffffff' }}
@@ -27,7 +30,7 @@ const NavBar = () => {
           <NavLink
             exact={true}
             activeStyle={{ color: '#ffffff' }}
-            to="/login"
+            to="/"
             className="login-btn navigation-links-inner"
           >
             Log In

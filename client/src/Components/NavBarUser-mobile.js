@@ -10,30 +10,29 @@ const NavBarUser = () => {
       <img src={Logo} alt="SIXR Logo" className="sixr-logo" />
       <Menu right>
         {/* <div className="nav-wrapper-mobile"> */}
-          <NavLink
-            exact={true}
-            to="/"
-            className="navigation-links-inner-mobile menu-item"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            exact={true}
-            activeStyle={{ color: '#ffffff' }}
-            to="/projects"
-            className="navigation-links-inner-mobile menu-item"
-          >
-            Projects
-          </NavLink>
+        <a
+          href="https://vr-funding-platform.github.io/SIXR--marketing/index.html"
+          className="navigation-links-inner-mobile menu-item"
+        >
+          Home
+        </a>
+        <NavLink
+          exact={true}
+          activeStyle={{ color: '#ffffff' }}
+          to="/projects"
+          className="navigation-links-inner-mobile menu-item"
+        >
+          Projects
+        </NavLink>
 
-          <NavLink
-            exact={true}
-            activeStyle={{ color: '#ffffff' }}
-            to="/user"
-            className="navigation-links-inner-mobile menu-item"
-          >
-            MY PROFILE
-          </NavLink>
+        <NavLink
+          exact={true}
+          activeStyle={{ color: '#ffffff' }}
+          to="/user"
+          className="navigation-links-inner-mobile menu-item"
+        >
+          MY PROFILE
+        </NavLink>
         {/* </div> */}
       </Menu>
     </nav>
