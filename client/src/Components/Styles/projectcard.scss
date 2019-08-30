@@ -8,6 +8,10 @@
   color: #08c6e7;
   margin-bottom: 120px;
 
+  @include tablet900 {
+    width: 95%;
+  }
+
   .project-num {
     font-size: 2.5rem;
     padding-top: 49px;
@@ -28,18 +32,42 @@
     justify-content: space-between;
     padding-top: 79px;
 
+    @include tablet900 {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .left-project-container {
       .proj-image-container {
         overflow: hidden;
 
+        @include tablet900 {
+          max-width: 100%;
+        }
+
         .project-image {
           max-width: 660px;
           height: auto;
+
+          @include desktop1200 {
+            max-width: 450px;
+            height: auto;
+          }
+
+          @include tablet900 {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+          }
         }
       }
 
       .funding-elements {
         padding-top: 32px;
+
+        @include tablet900 {
+          display: none;
+        }
 
         .funding-amount {
           font-size: 3.35rem;
@@ -58,6 +86,12 @@
     .right-project-container {
       width: 50%;
       padding-left: 22px;
+
+      @include tablet900 {
+        width: 95%;
+        padding-left: 0px;
+        padding-top: 40px;
+      }
 
       .description-rows {
         font-size: 2.2rem;
