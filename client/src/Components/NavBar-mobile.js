@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <img src={Logo} alt="SIXR Logo" className="sixr-logo" />
-      <Menu>
+      <Menu >
         <a
           href="https://vr-funding-platform.github.io/SIXR--marketing/index.html"
           className="navigation-links-inner-mobile menu-item"
@@ -38,8 +38,7 @@ const NavBar = () => {
         <NavLink
           exact={true}
           activeStyle={{
-            color: '#ffffff',
-            border: match ? '2px solid #ffffff' : '4px solid #ffffff'
+            color: '#ffffff'
           }}
           to="/signup"
           className="navigation-links-inner-mobile menu-item"

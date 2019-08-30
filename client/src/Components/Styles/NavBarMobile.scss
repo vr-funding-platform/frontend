@@ -17,16 +17,6 @@
     }
   }
 
-  // .nav-wrapper-mobile {
-  //   // display: none;
-  //   display: flex;
-  //   flex-direction: column;
-  //   text-transform: uppercase;
-
-  //   @include desktop1200 {
-  //     width: 65%;
-  //   }
-
   .navigation-links-inner-mobile {
     text-decoration: none;
     color: #08c6e7;
@@ -46,7 +36,7 @@
 
 // /* Individual item */
 .bm-item {
-  display: block;
+  display: inline-block;
 
   /* Our sidebar item styling */
   text-decoration: none;
@@ -94,6 +84,10 @@
 .bm-menu {
   background: #373a47;
   padding: 8px 8px;
+}
+
+.bm-menu-wrap {
+  display: block;
 }
 
 /* Morph shape necessary with bubble or elastic */
