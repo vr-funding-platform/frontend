@@ -7,6 +7,7 @@ import ProjectList from './Components/ProjectList';
 import axios from 'axios';
 import './App.css';
 import Footer from "./Components/Footer";
+import DonorCard from './Components/DonorCard';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className="App">
      <NavBar />
-     <UserCard/>
+     <DonorCard/>
       {/* <Route path="/projects" component={Projects} /> */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
