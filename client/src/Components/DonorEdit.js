@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import DonorCard from "./DonorCard";
 import ReactDOM from 'react-dom';
 import {Formik, Form, Field} from "formik";
@@ -8,21 +8,25 @@ class DonorInfo extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        editing: false
+        editing: true
       };
       this.newType = "";
       this.newName = "";
       this.newEmail = "";
+      
 
     }
-  
+ 
     render() {
-      const {name, email, type, onEdit } = this.props;
+      const {name, email, type, } = this.props;
 
 return (
+    <Fragment>
+      
 <div className="Donor-Info">
 
-    <h1>User</h1>
+    <h1>User: <input {...this.newType}/></h1>
+    
     {this.state.editing ? (
     <span className="type">{type} </span>
 ) :
@@ -36,7 +40,7 @@ return (
         
         }}/>
     }
-    <h2>Name:</h2>
+    <h2>Name: <input {...this.newName}/></h2>
     {this.state.editing ? (
     <span className="Donor-Text">{name}</span>
     ) :
@@ -48,7 +52,7 @@ return (
         this.newName = node;
         }}/>
     }
-    <h2>Email:</h2>
+    <h2>Email: <input {...this.newEmail}/></h2>
     {this.state.editing ? (
     <span className="Donor-Text">{email}</span>
     ) :
@@ -59,6 +63,7 @@ return (
         ref={node => {
         this.newEmail = node;
         }}/>
+        
     }
     <h2>Password:</h2>
     <span className="Donor-Text">************</span>
@@ -73,13 +78,20 @@ return (
             </button>
             <button className="InfoB"
               onClick={() => {
-                this.setState({ editing: true });
+                this.setState({ 
+                  editing: true ,
+                });
               }}
             >
               Save Profile
             </button>
+            
     </div>
 </div>
+
+
+}
+</Fragment>
 )
     }
 }
