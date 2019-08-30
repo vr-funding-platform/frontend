@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Redirect, Link } from 'react-router-dom';
+import { useMedia } from 'react-use';
 import NavBar from './Components/NavBar';
 import NavBarUser from './Components/NavBarUser';
+import NavBarMobile from './Components/NavBar-mobile';
+import NavBarUserMobile from './Components/NavBarUser-mobile';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import ProjectList from './Components/ProjectList';
@@ -15,6 +18,7 @@ import './App.css';
 function App() {
   //this determines whether the navbar shows the user info or not
   const [navUser, setNavUser] = useState(false);
+  const match800 = useMedia('(max-width: 800px)');
 
   //Fake authorization
   const fakeAuth = {
@@ -58,7 +62,10 @@ function App() {
 
   return (
     <div className="App">
-      {navUser ? <NavBarUser /> : <NavBar />}
+      {/* {navUser ? <NavBarUser /> : <NavBar />} */}
+      {match800
+        ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
+        : [navUser ? <NavBarUser /> : <NavBar />]}
       <Link to="/protected">Protected</Link>
 
       <Route
