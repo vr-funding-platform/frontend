@@ -31,7 +31,6 @@ function App() {
     }
   };
 
-
   const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route
       {...rest}
@@ -72,7 +71,10 @@ function App() {
         path="/login"
         render={props => <Login {...props} auth={fakeAuth} />}
       />
-      <Route path="/signup" render={props => <Signup {...props} />} />
+      <Route
+        path="/signup"
+        render={props => <Signup {...props} auth={fakeAuth} />}
+      />
       <PrivateRoute path="/protected" component={Protected} />
       {/* <footer>
         <Footer/>
