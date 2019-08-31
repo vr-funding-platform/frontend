@@ -46,7 +46,7 @@ table {
 
 *, :focus {
   box-sizing: border-box;
-  background: black;
+  background: transparent;
   outline: none;
 }
 

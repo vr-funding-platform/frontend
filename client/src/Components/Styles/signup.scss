@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .signup-form {
   width: 100%;
 
@@ -11,6 +13,10 @@
     .signup-head {
       font-size: 3.6rem;
       font-weight: bold;
+
+      @include desktop1050 {
+        font-size: 3rem;
+      }
     }
 
     .signup-form-inputs {
@@ -21,9 +27,22 @@
       width: 100%;
       max-width: 665px;
 
+      @include desktop1050 {
+        width: 50%;
+      }
+
+      @include desktop1050 {
+        width: 80%;
+      }
+
       .signup-input-label {
         font-size: 2.5rem;
         padding-left: 5px;
+
+        @include desktop1050 {
+          font-size: 1.75rem;
+          padding-left: 5px;
+        }
       }
 
       .signup-input-field {
@@ -35,6 +54,11 @@
         text-align: left;
         width: 100%;
         padding: 12px 10px;
+
+        @include desktop1050 {
+          font-size: 2.5rem;
+          padding: 8px 6px;
+        }
       }
 
       .form-element {
@@ -68,6 +92,18 @@
         &:hover {
           background: #09b3d1;
         }
+
+        @include desktop1050 {
+          font-size: 2rem;
+          padding: 15px 50px;
+          border-radius: 20px;
+        }
+
+        @include tablet700 {
+          font-size: 1.4rem;
+          padding: 10px 30px;
+          border-radius: 15px;
+        }
       }
     }
   }
@@ -79,6 +115,10 @@
   font-size: 1.5rem;
   color: #d81159;
   transition: 0.2s;
+
+  @include desktop1050 {
+    font-size: 1.2rem;
+  }
 }
 
 .radio-form-element {
@@ -92,6 +132,10 @@
     text-align: center;
     font-size: 3.3rem;
     font-weight: bold;
+
+    @include tablet900 {
+      font-size: 2.5rem;
+    }
   }
   .account-radio-buttons {
     display: flex;
@@ -99,6 +143,14 @@
     align-content: center;
     justify-content: space-between;
     padding-top: 58px;
+
+    @include tablet900 {
+      width: 60%;
+    }
+
+    @include mobile600 {
+      width: 80%;
+    }
 
     .radio-label {
       display: flex;
@@ -114,6 +166,16 @@
       cursor: pointer;
       user-select: none;
       transition: 0.15s;
+
+      @include tablet900 {
+        font-size: 1.75rem;
+        width: 150px;
+        height: 150px;
+      }
+
+      @include mobile600 {
+        margin: 0px 10px;
+      }
 
       &:hover {
         color: whitesmoke;
