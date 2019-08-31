@@ -35,7 +35,7 @@ const NavBar = () => {
         </div>
 
         {/* //UNLESS user is not logged in, display below */}
-        {/* {/* <div className="login-signup-btns">
+         <div className="login-signup-btns">
           <NavLink
             exact={true}
             activeStyle={{ color: '#ffffff' }}
@@ -52,7 +52,7 @@ const NavBar = () => {
           >
             Sign Up
           </NavLink> 
-        </div> */}
+        </div>
       </div>
     </nav>
   );
