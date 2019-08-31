@@ -2,13 +2,14 @@ import React from 'react';
 import { IoLogoFacebook } from 'react-icons/io';
 import { IoLogoTwitter } from 'react-icons/io';
 import { IoLogoYoutube } from 'react-icons/io';
+import footerimg from './Styles/vrimage.png';
 import './Styles/Footer.css';
 
 function Footer() {
   return (
     <footer>
 
-      <img src="./Styles/vrimage.png" alt="VR Headgear"></img>
+      <img src={footerimg} alt="VR Headgear"></img>
       <div className="footer-social">
         <p>
           &copy;SIXER 2019 - Simulated Immersive eXperimental Realities |
