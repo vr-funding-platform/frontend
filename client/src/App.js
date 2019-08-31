@@ -81,10 +81,7 @@ function App() {
           return projects && <ProjectList {...props} projects={projects} />;
         }}
       />
-      <PrivateRoute
-        path="/user/1"
-        component={DonorList}
-      />
+      <PrivateRoute path="/user" component={DonorList} />
       <Footer />
     </div>
   );

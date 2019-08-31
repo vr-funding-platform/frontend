@@ -28,7 +28,7 @@ const NavBarUser = () => {
         <NavLink
           exact={true}
           activeStyle={{ color: '#ffffff' }}
-          to="/user/1"
+          to="/user"
           className="navigation-links-inner-mobile menu-item"
         >
           MY PROFILE
