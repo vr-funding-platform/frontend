@@ -21,7 +21,7 @@ const NavBar = () => {
         </NavLink>
 
         {/* //IF user is logged in, show below */}
-        {/* <div className="user-navcard">
+        <div className="user-navcard">
           <NavLink exact={true} activeStyle={{color: "#ffffff"}} to="/user" className="user-card-link">
             Jeff the philanthropic one
             <div className="img-wrapper">
@@ -32,10 +32,10 @@ const NavBar = () => {
               />
             </div>
           </NavLink>
-        </div> */}
+        </div>
 
         {/* //UNLESS user is not logged in, display below */}
-        <div className="login-signup-btns">
+        {/* {/* <div className="login-signup-btns">
           <NavLink
             exact={true}
             activeStyle={{ color: '#ffffff' }}
@@ -51,8 +51,8 @@ const NavBar = () => {
             className="sign-up-btn"
           >
             Sign Up
-          </NavLink>
-        </div>
+          </NavLink> 
+        </div> */}
       </div>
     </nav>
   );
