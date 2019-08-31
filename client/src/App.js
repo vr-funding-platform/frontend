@@ -8,12 +8,14 @@ import NavBarUserMobile from './Components/NavBarUser-mobile';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import ProjectList from './Components/ProjectList';
+import Footer from "./Components/Footer";
+import DonorList from "./Components/DonorList"
 import axios from 'axios';
 
 import Protected from './Components/Protected';
 import BGImg from './Components/BG-Img';
 import './App.css';
-// import Footer from "./Components/Footer";
+
 
 function App() {
   //this determines whether the navbar shows the user info or not
@@ -67,13 +69,6 @@ function App() {
           ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
           : [navUser ? <NavBarUser /> : <NavBar />]}
         <Link to="/protected">Protected</Link>
-
-        <Route
-          path="/projects"
-          render={props => {
-            return projects && <ProjectList {...props} projects={projects} />;
-          }}
-        />
         <Route
           exact
           path="/"
@@ -84,9 +79,13 @@ function App() {
           render={props => <Signup {...props} auth={fakeAuth} />}
         />
         <PrivateRoute path="/protected" component={Protected} />
-        {/* <footer>
-        <Footer/>
-      </footer> */}
+      <Route path="/projects" render={(props) => {
+        return projects && <ProjectList {...props} projects={projects} />;
+      }} />
+      <Route path="/user" render={(props) => {
+        return projects && <DonorList  {...props} projects={projects} />;
+      }}/>
+      <Footer/>
     </div>
   );
 }
