@@ -7,6 +7,7 @@ import './Styles/Footer.css';
 function Footer() {
   return (
     <footer>
+
       <img src="./Styles/vrimage.png" alt="VR Headgear"></img>
       <div className="footer-social">
         <p>
