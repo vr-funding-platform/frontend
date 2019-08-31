@@ -1,7 +1,4 @@
 import React, { Fragment } from 'react';
-import DonorCard from './DonorCard';
-import ReactDOM from 'react-dom';
-import { Formik, Form, Field } from 'formik';
 import './Styles/DonorInfo.scss';
 
 class DonorInfo extends React.Component {

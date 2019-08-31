@@ -1,13 +1,9 @@
 import React, {Fragment} from 'react';
 import './Styles/Donor.scss';
-import { Route, Link } from 'react-router-dom';
 import DonorCard from "./DonorCard";
 import DonorInfo from "./DonorEdit";
 
 const Donor = props => {
-    const type = "Donor"
-    const name = "Jeff the philanthropic one";
-    const email ="jeffreyz007@yahoo.com";
     
 return (
 
