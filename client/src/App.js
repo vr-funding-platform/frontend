@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Redirect, Link } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { useMedia } from 'react-use';
 import NavBar from './Components/NavBar';
 import NavBarUser from './Components/NavBarUser';
@@ -8,14 +8,12 @@ import NavBarUserMobile from './Components/NavBarUser-mobile';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import ProjectList from './Components/ProjectList';
-import Footer from "./Components/Footer";
-import DonorList from "./Components/DonorList"
+import Footer from './Components/Footer';
+import DonorList from './Components/DonorList';
 import axios from 'axios';
 
-import Protected from './Components/Protected';
 import BGImg from './Components/BG-Img';
 import './App.css';
-
 
 function App() {
   //this determines whether the navbar shows the user info or not
@@ -28,12 +26,12 @@ function App() {
     authenticate(cb) {
       this.isAuthenticated = true;
       setNavUser(true);
-      setTimeout(cb, 100); // fake async
+      setTimeout(cb, 50); // fake async
     },
     signout(cb) {
       this.isAuthenticated = false;
       setNavUser(false);
-      setTimeout(cb, 100); // fake async
+      setTimeout(cb, 50); // fake async
     }
   };
 
@@ -42,9 +40,9 @@ function App() {
       {...rest}
       render={props =>
         fakeAuth.isAuthenticated === true ? (
-          <Component {...props} />
+          <Component {...props} projects={projects} />
         ) : (
-          <Redirect to="/login" />
+          <Redirect to="/" />
         )
       }
     />
@@ -65,27 +63,29 @@ function App() {
   return (
     <div className="App">
       <BGImg />
-        {match800
-          ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
-          : [navUser ? <NavBarUser /> : <NavBar />]}
-        <Link to="/protected">Protected</Link>
-        <Route
-          exact
-          path="/"
-          render={props => <Login {...props} auth={fakeAuth} />}
-        />
-        <Route
-          path="/signup"
-          render={props => <Signup {...props} auth={fakeAuth} />}
-        />
-        <PrivateRoute path="/protected" component={Protected} />
-      <Route path="/projects" render={(props) => {
-        return projects && <ProjectList {...props} projects={projects} />;
-      }} />
-      <Route path="/user" render={(props) => {
-        return projects && <DonorList  {...props} projects={projects} />;
-      }}/>
-      <Footer/>
+      {match800
+        ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
+        : [navUser ? <NavBarUser /> : <NavBar />]}
+      <Route
+        exact
+        path="/"
+        render={props => <Login {...props} auth={fakeAuth} />}
+      />
+      <Route
+        path="/signup"
+        render={props => <Signup {...props} auth={fakeAuth} />}
+      />
+      <Route
+        path="/projects"
+        render={props => {
+          return projects && <ProjectList {...props} projects={projects} />;
+        }}
+      />
+      <PrivateRoute
+        path="/user/1"
+        component={DonorList}
+      />
+      <Footer />
     </div>
   );
 }

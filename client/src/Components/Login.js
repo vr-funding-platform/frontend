@@ -11,13 +11,13 @@ const Login = ({ errors, touched, auth, status }) => {
   useEffect(() => {
     if (status === true) {
       auth.authenticate(() => {
-        setRedirectToReferrer(true);
+          setRedirectToReferrer(true);
       });
     }
   }, [status, auth]);
 
   if (redirectToReferrer === true) {
-    return <Redirect to="/protected" />;
+    return <Redirect to="/projects" />;
   }
 
   return (

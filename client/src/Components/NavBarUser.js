@@ -27,7 +27,7 @@ const NavBarUser = () => {
           <NavLink
             exact={true}
             activeStyle={{ color: '#ffffff' }}
-            to="/user"
+            to="/user/1"
             className="user-card-link"
           >
             Jeff the philanthropic one
