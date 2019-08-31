@@ -18,7 +18,7 @@ const SignUp = ({ errors, touched, auth, status }) => {
   }, [status, auth]);
 
   if (redirectToReferrer === true) {
-    return <Redirect to="/protected" />;
+    return <Redirect to="/projects" />;
   }
 
   return (
