@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,10 @@
   .sixr-logo {
     height: 137px;
     width: auto;
+
+    @include desktop1050 {
+      height: 75px;
+    }
   }
 
   .nav-wrapper {
@@ -20,11 +26,19 @@
     text-transform: uppercase;
     width: 76%;
 
+    @include desktop1200 {
+      width: 65%;
+    }
+
     .navigation-links-inner {
       text-decoration: none;
       color: #08c6e7;
       font-size: 2.5rem;
       transition: 0.15s;
+
+      @include desktop1050 {
+        font-size: 2rem;
+      }
 
       &:hover {
         color: rgb(122, 235, 255);
@@ -37,6 +51,14 @@
   .user-card-link {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #08c6e7;
+    font-size: 2.5rem;
+    transition: 0.15s;
+
+    &:hover {
+      color: rgb(122, 235, 255);
+    }
 
     .img-wrapper {
       margin-left: 20px;
@@ -58,13 +80,20 @@
 .login-signup-btns {
   .login-btn {
     margin-right: 100px;
+
+    @include desktop1200 {
+      margin-right: 50px;
+    }
+    @include tablet850 {
+      margin-right: 25px;
+    }
   }
 
   .sign-up-btn {
     font-weight: bold;
     color: white;
     padding: 20px 57px;
-    border: 4px solid #2BD9F7;
+    border: 4px solid #2bd9f7;
     border-radius: 25px;
     text-decoration: none;
     font-size: 2.5rem;
@@ -72,6 +101,17 @@
 
     &:hover {
       border: 4px solid rgb(122, 235, 255);
+    }
+
+    @include desktop1050 {
+      font-size: 2rem;
+      border: 2px solid #2bd9f7;
+      padding: 15px 35px;
+      border-radius: 15px;
+
+      &:hover {
+        border: 2px solid rgb(122, 235, 255);
+      }
     }
   }
 }
