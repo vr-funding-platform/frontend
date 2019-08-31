@@ -13,7 +13,7 @@ function Footer () {
     return (
     
     <footer>
-            <img src="https://files.slack.com/files-pri/T4JUEB3ME-FMSTV7THV/image.png" alt="VR Headgear"></img>
+            <img src="./Styles/VR-Image.png" alt="VR Headgear"></img>
             <div className="footer-social">
                 <p>&copy;SIXER 2019 - Simulated Immersive eXperimental Realities | Brooklyn Ave NE, Seattle, WA, 98105 | 206-571-8430 | SIXR@Studivo.com</p>
                 <p>Social Media Links</p>

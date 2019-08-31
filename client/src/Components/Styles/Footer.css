@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
+    background-color:transparent;
 }
 footer img {
     width: 32.3rem;
