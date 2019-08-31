@@ -1,12 +1,10 @@
 import React from 'react';
-import { useMedia } from 'react-use';
 import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import './Styles/NavBarMobile.scss';
 import Logo from './Styles/Logo.png';
 
 const NavBar = () => {
-  const match = useMedia('(max-width: 1050px)');
 
   return (
     <nav className="navbar">

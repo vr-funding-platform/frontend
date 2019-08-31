@@ -11,7 +11,7 @@ import ProjectList from './Components/ProjectList';
 import axios from 'axios';
 
 import Protected from './Components/Protected';
-
+import BGImg from './Components/BG-Img';
 import './App.css';
 // import Footer from "./Components/Footer";
 
@@ -62,27 +62,29 @@ function App() {
 
   return (
     <div className="App">
-      {match800
-        ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
-        : [navUser ? <NavBarUser /> : <NavBar />]}
-      <Link to="/protected">Protected</Link>
+      <BGImg />
+        {match800
+          ? [navUser ? <NavBarUserMobile /> : <NavBarMobile />]
+          : [navUser ? <NavBarUser /> : <NavBar />]}
+        <Link to="/protected">Protected</Link>
 
-      <Route
-        path="/projects"
-        render={props => {
-          return projects && <ProjectList {...props} projects={projects} />;
-        }}
-      />
-      <Route
-        exact path="/"
-        render={props => <Login {...props} auth={fakeAuth} />}
-      />
-      <Route
-        path="/signup"
-        render={props => <Signup {...props} auth={fakeAuth} />}
-      />
-      <PrivateRoute path="/protected" component={Protected} />
-      {/* <footer>
+        <Route
+          path="/projects"
+          render={props => {
+            return projects && <ProjectList {...props} projects={projects} />;
+          }}
+        />
+        <Route
+          exact
+          path="/"
+          render={props => <Login {...props} auth={fakeAuth} />}
+        />
+        <Route
+          path="/signup"
+          render={props => <Signup {...props} auth={fakeAuth} />}
+        />
+        <PrivateRoute path="/protected" component={Protected} />
+        {/* <footer>
         <Footer/>
       </footer> */}
     </div>

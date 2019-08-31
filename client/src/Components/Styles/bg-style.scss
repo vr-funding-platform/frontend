@@ -1,0 +1,18 @@
+.bg-img {
+  background: url('./bg-image.png');
+  filter: opacity(17%);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -5
+}
+
+.bg-style-bk {
+    background: black;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: -10
+}
