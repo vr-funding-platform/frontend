@@ -1,8 +1,9 @@
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color:transparent;
+    margin-top: 15px;
 }
 footer img {
     width: 32.3rem;

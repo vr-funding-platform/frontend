@@ -8,8 +8,6 @@ import './Styles/Footer.css';
 function Footer() {
   return (
     <footer>
-
-      <img src={footerimg} alt="VR Headgear"></img>
       <div className="footer-social">
         <p>
           &copy;SIXER 2019 - Simulated Immersive eXperimental Realities |
